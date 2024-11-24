@@ -1,0 +1,174 @@
+:root {
+  --redColor: #ed174a;
+  --blueColor: #233a95;
+  --darkBlueColor: #0f183a;
+}
+
+#admin-heading {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.my-button {
+  border-width: 2px;
+  border-color: var(--redColor);
+  color: var(--redColor);
+  font-weight: bold;
+  padding: .75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+input,textarea,select {
+  outline: 0;
+}
+
+.my-button:hover {
+  color: white !important;
+  background-color: var(--redColor);
+}
+
+.sign-form input,
+.sign-form select {
+  outline: 0;
+  border: 2px solid #e5e7eb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+#hero {
+  background-image: url(/banner8.jpg);
+  background-size: cover;
+}
+
+#video video {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+#cashback .col:first-of-type {
+  background-size: cover;
+  background-image: url(/bgs1.jpg);
+}
+
+#cashback .col:last-of-type {
+  background-size: cover;
+  background-image: url(/bgs2.jpg);
+  background-color: rgb(0 0 0 / 0.35);
+  background-blend-mode: darken;
+}
+
+#special-heading {
+  width: fit-content;
+  margin: 0 auto 3.5rem;
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  font-size: xx-large;
+}
+
+#special-heading::before,
+#special-heading::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#special-heading::before {
+  width: 100px;
+  background-color: var(--redColor);
+  left: -120px;
+}
+
+#special-heading::after {
+  width: 150px;
+  transform: rotate(-45deg);
+  background-color: #222;
+  right: calc(50% - 90px);
+}
+
+#deals .col .box-1 {
+  background-image: url(/bgs3.jpg);
+}
+
+#deals .col .box-2 {
+  background-image: url(/bgs5.jpg);
+}
+
+#deals .col .box-3 {
+  background-image: url(/bgs4.jpg);
+  height: 100%;
+}
+
+#deals .col [class|="box"] {
+  background-size: cover;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+#my-card-links {
+  bottom: -100%;
+  transition: 300ms;
+}
+
+#my-card:hover #my-card-links {
+  bottom: 0;
+}
+
+#footer-cols h3 {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    width: 20%;
+    height: 2px;
+    background-color: var(--blueColor);
+  }
+}
+
+#footer-cols ul {
+  display: grid;
+  gap: 1rem;
+}
+
+#footer-cols ul li,
+#footer-cols ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  #footer-cols h3 {
+    text-align: center;
+    &::before {
+      width: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  #footer-cols ul li,
+  #footer-cols ul li a {
+    justify-content: center;
+  }
+}
+
+#countries-list li {
+  padding-bottom: 1rem;
+  &:not(&:last-of-type) {
+    border-bottom: 1px solid;
+  }
+}
+
+#countries-table td {
+  border: 1px solid;
+  padding: 5px 10px;
+}
